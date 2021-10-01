@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 
 class Operacoes extends React.Component {
-
+// Criando o construtor para receber as tres variaveis necessarias para o projeto
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ class Operacoes extends React.Component {
     this.handleNumero1 = this.handleNumero1.bind(this);
     this.handleNumero2 = this.handleNumero2.bind(this);
   }
-
+//setando as variaveis para que ela possam ser modificadas ao longo do codigo
   handleNumero1(event) {
     this.setState({
       numero1: Number(event.target.value),
@@ -24,6 +24,7 @@ class Operacoes extends React.Component {
       numero2: Number(event.target.value),
     });
   }
+  //criando as funçôes para que o calculo seja feito, e fazendo com que eles consigam ser modificados
   opera(op) {
     switch (op) {
       case 'somar':
@@ -48,6 +49,7 @@ class Operacoes extends React.Component {
         break;
     }
   }
+  //criando a renderização da pagina para que consiga visualizar
   render() {
     return (
       <div class="container" id= "container">
